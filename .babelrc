@@ -2,6 +2,6 @@
     "presets": [
         "@babel/preset-env", //compiling ES2015+ syntax
         "@babel/preset-typescript",// TS
-        "@babel/preset-react" //for react
+        ["@babel/preset-react", {"runtime": "automatic"}]
     ]
   }
