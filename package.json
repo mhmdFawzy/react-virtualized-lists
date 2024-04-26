@@ -58,7 +58,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run format",
-      "npm run lint:fix"
+      "eslint --max-warnings 0 ."
     ]
   }
 }
