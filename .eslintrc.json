@@ -43,6 +43,10 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "import/no-extraneous-dependencies": "off",
         "semi":"off",
+        "consistent-return": "off",
+        "react/function-component-definition": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-var-requires": "off",
         "prettier/prettier": [
             "error",
             {

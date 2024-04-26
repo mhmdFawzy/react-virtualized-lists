@@ -4,7 +4,9 @@ import './app.css'
 function App() {
   return (
     <div>
-      <h1>Create React App from Scratch Using Typescript..!!</h1>
+      <h1 className="text-primary text-4xl font-bold">
+        Create React App from Scratch Using Typescript..!!
+      </h1>
     </div>
   )
 }
