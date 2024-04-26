@@ -6,6 +6,6 @@ function App() {
     <div>
       <h1>Create React App from Scratch Using Typescript..!!</h1>
     </div>
-  );
+  )
 }
-export default App;
+export default App
