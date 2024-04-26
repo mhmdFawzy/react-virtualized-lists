@@ -1,4 +1,4 @@
-import Tag from '../../Tag/Tag'
+import Tag from '../../Tag'
 import { TABLE_ROW_HEIGHT } from '../constants'
 import type { ListItemProps } from './types'
 
