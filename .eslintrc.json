@@ -46,6 +46,7 @@
         "consistent-return": "off",
         "react/function-component-definition": "off",
         "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-var-requires": "off",
         "prettier/prettier": [
             "error",
             {
