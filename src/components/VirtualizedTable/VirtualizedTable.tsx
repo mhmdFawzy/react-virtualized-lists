@@ -5,15 +5,23 @@ import Table from './Table'
 
 const VirtualizedTable = ({ numberOfRows }: VirtualizedTableProps) => {
   const [scrollTop, setScrollTop] = useState(0)
+
   const startIndex = Math.max(
     0,
     Math.floor(scrollTop / TABLE_ROW_HEIGHT) - OVER_SCAN
   )
+
   let renderedNodesCount =
     Math.floor(WINDOW_HEIGHT / TABLE_ROW_HEIGHT) + 2 * OVER_SCAN
   renderedNodesCount = Math.min(numberOfRows - startIndex, renderedNodesCount)
 
+  /**
+   * Handle scroll event and update scrollTop state
+   *
+   * @param {UIEvent<HTMLDivElement>} event - scroll event
+   */
   const handleScroll: UIEventHandler<HTMLDivElement> = (event) => {
+    // Update scrollTop state based on the current scroll position
     setScrollTop(event.currentTarget.scrollTop)
   }
 
