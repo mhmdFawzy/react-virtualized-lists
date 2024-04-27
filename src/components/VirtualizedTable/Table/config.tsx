@@ -2,23 +2,21 @@ import TableItem from '../TableItem'
 import { ticketPriority, ticketStatus } from '../constants'
 import { GenerateRows, TicketPriority, TicketStatus } from '../types'
 
+export function getRandomValue(value: typeof ticketPriority): TicketPriority
+export function getRandomValue(value: typeof ticketStatus): TicketStatus
 /**
-+ * Gets a random value from an array of values.
-+ *
-+ * @template T - Type of the array. Must be typeof ticketStatus or typeof ticketPriority.
-+ *
-+ * @param value - Array of values to get a random value from.
-+ *
-+ * @returns Random value from the array. If T is typeof ticketStatus, returns TicketStatus.
-+ * If T is typeof ticketPriority, returns TicketPriority.
-+ */
-const getRandomValue = <T extends typeof ticketStatus | typeof ticketPriority>(
-  value: T
-) => {
+ * Returns a random value from the provided array.
+ * @param value - array of values
+ * @returns a random value from the provided array
+ */
+export function getRandomValue(
+  value: typeof ticketPriority | typeof ticketStatus
+): TicketPriority | TicketStatus {
+  // Generate a random index based on the length of the array
   const randomIndex = Math.floor(Math.random() * value.length)
-  return value[randomIndex] as T extends typeof ticketStatus
-    ? TicketStatus
-    : TicketPriority
+
+  // Return a value at the generated index
+  return value[randomIndex]
 }
 
 /**
